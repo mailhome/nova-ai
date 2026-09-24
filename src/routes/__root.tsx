@@ -3,6 +3,8 @@ import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools"
 import { TanStackDevtools } from "@tanstack/react-devtools"
 
 import appCss from "../styles.css?url"
+import { Navbar } from "@/components/navbar/navbar"
+import Footer from "@/components/footer/footer"
 
 export const Route = createRootRoute({
   head: () => ({
@@ -40,8 +42,15 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body>
-        {children}
+      <body className="bg-[#F8FAFC] text-black dark:bg-black dark:text-white">
+        <div className="min-h-screen flex flex-col w-full">
+          <Navbar />
+          <div className="flex-1 flex flex-col w-full">
+            {children}
+          </div>
+          <Footer />
+        </div>
+        
         <TanStackDevtools
           config={{
             position: "bottom-right",
