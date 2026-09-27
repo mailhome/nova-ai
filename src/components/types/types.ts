@@ -47,3 +47,8 @@ export interface ContactItems {
     icon: LucideIcon;
     label: string;
 }
+
+export interface ShamsItems {
+    label: string;
+    desc: string;
+}
