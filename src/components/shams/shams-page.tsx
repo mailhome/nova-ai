@@ -47,13 +47,14 @@ function ShamsContent () {
                             </div>
                         ))}
                     </div>
-                    <a href="/contact">
-                        <Button
-                            className="w-full rounded-md bg-[#005c3d] py-6 px-6 font-medium text-white hover:bg-[#004a31] transition-colors text-md lg:text-lg"
-                            >
-                                Request a Shams Demo
-                        </Button>
-                    </a>
+                    
+                    <Button
+                        render={<a href="/contact" />}
+                        className="w-full rounded-md bg-[#005c3d] py-6 px-6 font-medium text-white hover:bg-[#004a31] transition-colors text-md lg:text-lg"
+                    >
+                        Request a Shams Demo
+                    </Button>
+
                     
                 </div>
             </div>
