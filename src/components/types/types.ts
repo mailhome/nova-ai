@@ -1,3 +1,5 @@
+import type { LucideIcon } from "lucide-react";
+
 export interface NavbarProps {
     label: string;
     href: string;
@@ -39,4 +41,9 @@ export interface FooterSubItemsProps {
 interface SubItemsProps {
     label: string;
     href: string;
+}
+
+export interface ContactItems {
+    icon: LucideIcon;
+    label: string;
 }
