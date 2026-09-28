@@ -52,3 +52,10 @@ export interface ShamsItems {
     label: string;
     desc: string;
 }
+
+export interface ResourcesItems {
+    headingLabel: string
+    label: string;
+    desc: string;
+    href: string;
+}

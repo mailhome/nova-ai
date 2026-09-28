@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as ShamsRouteImport } from './routes/shams'
 
 const IndexRoute = IndexRouteImport.update({
@@ -23,6 +24,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ResourcesRoute = ResourcesRouteImport.update({
+  id: '/resources',
+  path: '/resources',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ShamsRoute = ShamsRouteImport.update({
   id: '/shams',
   path: '/shams',
@@ -32,30 +38,34 @@ const ShamsRoute = ShamsRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/resources': typeof ResourcesRoute
   '/shams': typeof ShamsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/resources': typeof ResourcesRoute
   '/shams': typeof ShamsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/resources': typeof ResourcesRoute
   '/shams': typeof ShamsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/contact' | '/shams'
+  fullPaths: '/' | '/contact' | '/resources' | '/shams'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contact' | '/shams'
-  id: '__root__' | '/' | '/contact' | '/shams'
+  to: '/' | '/contact' | '/resources' | '/shams'
+  id: '__root__' | '/' | '/contact' | '/resources' | '/shams'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContactRoute: typeof ContactRoute
+  ResourcesRoute: typeof ResourcesRoute
   ShamsRoute: typeof ShamsRoute
 }
 
@@ -75,6 +85,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/resources': {
+      id: '/resources'
+      path: '/resources'
+      fullPath: '/resources'
+      preLoaderRoute: typeof ResourcesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/shams': {
       id: '/shams'
       path: '/shams'
@@ -88,6 +105,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactRoute: ContactRoute,
+  ResourcesRoute: ResourcesRoute,
   ShamsRoute: ShamsRoute,
 }
 export const routeTree = rootRouteImport

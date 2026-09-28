@@ -1,4 +1,4 @@
-import React from 'react'
+
 import WrapperContent from '../index/wrapper'
 import { shamsList } from '../data/shams'
 import { Button } from '../ui/button'
