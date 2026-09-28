@@ -1,4 +1,4 @@
-import React from 'react'
+
 import WrapperContent from '../index/wrapper'
 import { resourcesItems } from '../data/resources'
 
