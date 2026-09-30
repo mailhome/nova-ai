@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as IndustriesRouteImport } from './routes/industries'
 import { Route as ResourcesRouteImport } from './routes/resources'
 import { Route as ShamsRouteImport } from './routes/shams'
 
@@ -22,6 +23,11 @@ const IndexRoute = IndexRouteImport.update({
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndustriesRoute = IndustriesRouteImport.update({
+  id: '/industries',
+  path: '/industries',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ResourcesRoute = ResourcesRouteImport.update({
@@ -38,12 +44,14 @@ const ShamsRoute = ShamsRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/industries': typeof IndustriesRoute
   '/resources': typeof ResourcesRoute
   '/shams': typeof ShamsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/industries': typeof IndustriesRoute
   '/resources': typeof ResourcesRoute
   '/shams': typeof ShamsRoute
 }
@@ -51,20 +59,22 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/industries': typeof IndustriesRoute
   '/resources': typeof ResourcesRoute
   '/shams': typeof ShamsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/contact' | '/resources' | '/shams'
+  fullPaths: '/' | '/contact' | '/industries' | '/resources' | '/shams'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contact' | '/resources' | '/shams'
-  id: '__root__' | '/' | '/contact' | '/resources' | '/shams'
+  to: '/' | '/contact' | '/industries' | '/resources' | '/shams'
+  id: '__root__' | '/' | '/contact' | '/industries' | '/resources' | '/shams'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContactRoute: typeof ContactRoute
+  IndustriesRoute: typeof IndustriesRoute
   ResourcesRoute: typeof ResourcesRoute
   ShamsRoute: typeof ShamsRoute
 }
@@ -83,6 +93,13 @@ declare module '@tanstack/react-router' {
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries': {
+      id: '/industries'
+      path: '/industries'
+      fullPath: '/industries'
+      preLoaderRoute: typeof IndustriesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/resources': {
@@ -105,6 +122,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactRoute: ContactRoute,
+  IndustriesRoute: IndustriesRoute,
   ResourcesRoute: ResourcesRoute,
   ShamsRoute: ShamsRoute,
 }

@@ -59,3 +59,13 @@ export interface ResourcesItems {
     desc: string;
     href: string;
 }
+
+export interface IndustriesItemProps {
+    icon: LucideIcon,
+    headingLabel: string;
+    label: string;
+    desc: string;
+    itemList: String[]
+    buttonLabel: string;
+    buttonHref: string;
+}
