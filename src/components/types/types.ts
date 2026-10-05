@@ -69,3 +69,40 @@ export interface IndustriesItemProps {
     buttonLabel: string;
     buttonHref: string;
 }
+
+export interface SolutionListProps {
+    index: string;
+    label: string;
+    desc: string;
+}
+
+export interface productsHeroProps {
+    itemsList: String[];
+}
+
+export interface ProductValidationItemsProps {
+    icon: LucideIcon;
+    label: string;
+    desc: string;
+    indexNumber: string;
+}
+
+export interface HowSiraatWorksItemsProps {
+    icon: LucideIcon;
+    label: string;
+    desc: string;
+}
+
+export interface ValueIsVisibleItemsProps {
+    label: string;
+    title: string;
+    desc: string;
+    imgSrc: string;
+    imgAlt: string;
+    indexNumber: string;
+}
+export interface ProductOrganisationalIntelligenceItemsProps {
+    title: string;
+    desc: string;
+    indexNumber: string;
+}

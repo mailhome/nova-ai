@@ -7,7 +7,7 @@ export const navbarLinks: NavbarProps[] = [
   },
   {
     label: "Siraat",
-    href: "/siraat"
+    href: "/products"
   },
   {
     label: "Solutions",

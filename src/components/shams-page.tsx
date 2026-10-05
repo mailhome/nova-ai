@@ -1,7 +1,7 @@
 
-import WrapperContent from '../index/wrapper'
-import { shamsList } from '../data/shams'
-import { Button } from '../ui/button'
+import WrapperContent from './index/wrapper'
+import { shamsList } from './data/shams'
+import { Button } from './ui/button'
 
 export default function ShamsPage() {
   return (

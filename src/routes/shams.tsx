@@ -1,4 +1,4 @@
-import ShamsPage from '@/components/shams/shams-page'
+import ShamsPage from '@/components/shams-page'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/shams')({

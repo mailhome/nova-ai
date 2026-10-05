@@ -1,6 +1,6 @@
 
-import WrapperContent from '../index/wrapper'
-import { resourcesItems } from '../data/resources'
+import WrapperContent from './index/wrapper'
+import { resourcesItems } from './data/resources'
 
 export default function ResourcesPage() {
   return (

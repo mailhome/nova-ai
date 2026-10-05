@@ -1,15 +1,14 @@
 import { cn } from "cn";
-import { industriesItem } from "../data/industries";
-import WrapperContent from "../index/wrapper";
+import { industriesItem } from "./data/industries";
+import WrapperContent from "./index/wrapper";
 import { Check, MoveRight } from "lucide-react";
-import { Button } from "../ui/button";
+import { Button } from "./ui/button";
 
 
 export default function IndustriesPage() {
   return (
-    <section className=''>
       <div className="">
-        <div className="flex flex-col items-center justify-center gap-y-5 lg:gap-y-10 w-full px-3 md:px-6 lg:px-10 xl:px-40 lg:py-10 py-10 mx-auto w-full">
+        <div className="flex flex-col items-center justify-center gap-y-5 lg:gap-y-10 w-full px-3 md:px-6 lg:px-10 xl:px-40 lg:py-10 py-10 mx-auto">
            <div className="border-b w-full">
             <div className="pb-5 lg:pb-16">
               <WrapperContent
@@ -25,7 +24,7 @@ export default function IndustriesPage() {
 
         <IndustriesContentLower />
       </div>
-    </section>
+    
   )
 }
 
@@ -51,7 +50,7 @@ function  IndustriesContent () {
                  </li>
               ))}
             </ul> 
-            <Button className={cn("w-full lg:w-[200px] h-12 lg:w-h-14 bg-[#306A46] hover:bg-[#306A46] text-white text-md lg:text-xl flex items-center justify-start gap-3 px-4 lg:px-4 rounded-lg font-medium", item.headingLabel === "Real estate developers" && "bg-emerald-200 hover:bg-emerald-200 text-black")} render={<a href={item.buttonHref} />}>
+            <Button className={cn("w-full lg:w50 h-12 lg:w-h-14 bg-[#306A46] hover:bg-[#306A46] text-white text-md lg:text-xl flex items-center justify-start gap-3 px-4 lg:px-4 rounded-lg font-medium", item.headingLabel === "Real estate developers" && "bg-emerald-200 hover:bg-emerald-200 text-black")} render={<a href={item.buttonHref} />}>
               {item.buttonLabel}
               <MoveRight />
             </Button>                                   

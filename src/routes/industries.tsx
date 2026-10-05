@@ -1,4 +1,4 @@
-import IndustriesPage from '@/components/industries/industries-page'
+import IndustriesPage from '@/components/industries-page'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/industries')({
