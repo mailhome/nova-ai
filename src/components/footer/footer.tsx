@@ -6,10 +6,10 @@ import { footerItems } from "../data/footer";
 export default function Footer() {
   return (
     <div className="bottom-0 border-t w-full bg-[#FFFFFF]">
-      <div className="xl:pt-20 lg:pt-10 pt-6  px-4 md:px-6 lg:px-10 xl:px-16 mx-auto">
+      <div className="xl:pt-20 lg:pt-10 pt-6 container-wrapper mx-auto">
         <div className="flex flex-col items-start justify-start lg:gap-y-10 gap-y-5 ">
-          <div className="grid grid-cols-12  gap-x-10 xl:gap-x-20 border-b pb-5 lg:pb-10">
-            <div className="flex items-start flex-col justify-start lg:gap-y-5 gap-y-5 lg:col-span-3 col-span-9 mx-auto lg:mx-0">
+          <div className="grid grid-cols-12  gap-x-10 lg:gap-x-40 border-b pb-5 lg:pb-10">
+            <div className="flex items-start flex-col justify-start lg:gap-y-5 gap-y-5 lg:col-span-4 col-span-9 mx-auto lg:mx-0">
               <Logo />
               <p className="text-[#6B7280] text-xs md:text-sm lg:text-base xl:text-base leading-relaxed">
                 Architecting the next era of autonomous business operations — from our base in Dubai, across the UAE.
@@ -17,12 +17,12 @@ export default function Footer() {
               <div className="flex items-start flex-col justify-start lg:gap-y-2 gap-y-1">
                 <p className="text-[#6B7280] text-xs md:text-sm lg:text-base xl:text-lg leading-relaxed flex items-start gap-x-2 pr-4 msd:pr-0">
                   <MapPin className="text-[#36754D] h-4 w-4 lg:w-6 lg:h-6" />
-                  <span className="text-xs md:text-sm lg:text-md">Zorai — Dubai, United Arab Emirates Serving Dubai, Abu Dhabi & the wider UAE</span>
+                  <span className="text-xs md:text-sm lg:text-md">Novai — Dubai, United Arab Emirates Serving Dubai, Abu Dhabi & the wider UAE</span>
                 </p>
                 <p className="text-[#6B7280] text-xs md:text-sm lg:text-base xl:text-lg leading-relaxed flex items-center gap-x-2">
                   <Mail className="text-[#36754D] h-4 w-4 lg:w-5 lg:h-5" />
                   <a href="mailto:hello@norai.ae" className="text-xs md:text-sm lg:text-md xl:text-base leading-relaxed hover:text-[#36754D] transition-colors duration-200">
-                    hello@norai.ae
+                    hello@novai.ae
                   </a>
                 </p>
               </div>
@@ -55,7 +55,7 @@ export default function Footer() {
           </div>
           </div>
           <div className="py-2 lg:py-3 flex items-center justify-between text-xs md:text-sm lg:text-base xl:text-base text-[#6B7280] w-full gap-x-4 lg:gap-x-6 flex-col lg:flex-row gap-y-4">
-            <p>© 2024 Norai. All rights reserved.</p>
+            <p>© 2024 Novai. All rights reserved.</p>
             <div className="flex items-center justify-center gap-x-10">
               <a href="/privacy-policy" className="hover:text-[#36754D] transition-colors text-md lg:text-md duration-200">Privacy Policy</a>
               <a href="/terms-of-service" className="hover:text-[#36754D] text-md lg:text-md  transition-colors duration-200">Terms of Service</a>

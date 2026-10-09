@@ -7,7 +7,7 @@ import { navbarLinks, navbarLinks2 } from "../data/navbar";
 export const Navbar = (() => {
     return ( 
         <header className=" w-full bg-[#F8FAFC] shadow-md z-20 top-0 sticky ">
-            <nav className="px-4 md:px-6 lg:px-10 xl:px-16 mx-auto">
+            <nav className="container-wrapper">
 
                 {/* Desktop Naviagtion */}
                 <div className="hidden lg:flex justify-between items-center py-4">

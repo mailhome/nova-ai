@@ -17,7 +17,7 @@ export default function MeetCustomers() {
 function MeetCustomersList() {
     return (
         <div className="w-full">
-            <div className="w-full xl:mt-10 mt-6 gap-y-6 lg:gap-y-0 gap-x-6 xl:gap-x-12 grid grid-cols-1 lg:grid-cols-4">
+            <div className="w-full xl:mt-10 mt-6 gap-y-6 lg:gap-y-0 gap-x-6 xl:gap-x-6 grid grid-cols-1 lg:grid-cols-4">
                 {meetCustomersList.map((item) => (
                     <div key={item.labelHeading} className="bg-white flex flex-col items-start justify-start py-4 px-6  gap-y-3 border rounded-lg">
                         <h1 className="text-md md:text-base lg:text-xl xl:text-xl text-neutral-800 font-semibold">{item.labelHeading}</h1>
