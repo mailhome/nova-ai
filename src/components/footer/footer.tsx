@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="xl:pt-20 lg:pt-10 pt-6 container-wrapper mx-auto">
         <div className="flex flex-col items-start justify-start lg:gap-y-10 gap-y-5 ">
           <div className="grid grid-cols-12  gap-x-10 lg:gap-x-40 border-b pb-5 lg:pb-10">
-            <div className="flex items-start flex-col justify-start lg:gap-y-5 gap-y-5 lg:col-span-4 col-span-9 mx-auto lg:mx-0">
+            <div className="flex items-start flex-col justify-start lg:gap-y-5 gap-y-5 lg:col-span-4 col-span-12 mx-auto lg:mx-0">
               <Logo />
               <p className="text-[#6B7280] text-xs md:text-sm lg:text-base xl:text-base leading-relaxed">
                 Architecting the next era of autonomous business operations — from our base in Dubai, across the UAE.
@@ -36,7 +36,7 @@ export default function Footer() {
               </div>
             </div>
 
-          <div className="col-span-8 w-full">
+          <div className="lg:col-span-8 col-span-12 w-full">
             <div className="grid lg:grid-cols-4 grid-cols-2 mt-8 lg:mt-0 gap-y-10 gap-x-10 lg:gap-x-0 md:gap-x-16 ">
               {footerItems.map((item, index) => (
                 <div key={index} className="flex flex-col items-start justify-start lg:gap-y-6 gap-y-2 ">

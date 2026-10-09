@@ -4,7 +4,7 @@ import WrapperContent from "./wrapper";
 
 export default function MeetCustomers() {
   return (
-    <div className="w-full  px-4 md:px-6 lg:px-10 xl:px-16 mx-auto justify-center items-center px-4  bg-[#F8FAFC] border-b shadow-sm xl:py-16 lg:py-10 py-10">
+    <div className="w-full md:px-6 lg:px-10 xl:px-16 mx-auto justify-center items-center px-4  bg-[#F8FAFC] border-b shadow-sm xl:py-16 lg:py-10 py-10">
         <WrapperContent
         headerLabel="Channels" 
         headerTitle="Meet customers wherever they are." 
